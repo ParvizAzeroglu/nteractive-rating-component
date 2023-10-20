@@ -1,0 +1,149 @@
+:root {
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --light-grey: hsl(217, 12%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --orange: hsl(25, 97%, 53%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--white);
+  font-family: "Overpass", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--very-dark-blue);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-container {
+  max-width: 400px;
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.rating-header {
+  display: block;
+  width: 100%;
+}
+
+.rating-header > img {
+  padding: 0.5rem;
+  background-color: var(--very-dark-blue);
+  border-radius: 50%;
+}
+
+.rating-text {
+  padding: 1rem 0rem;
+  width: 100%;
+}
+
+.rating-text > h2 {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.rating-text > p {
+  color: var(--medium-grey);
+  font-size: 14px;
+  margin-top: 0.6rem;
+}
+
+.rating {
+  padding: 0.6rem 0rem;
+  width: 100%;
+}
+
+.rating > .star-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rating .star-container > .star {
+  border: none;
+  background-color: var(--medium-grey);
+  border-radius: 50%;
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 1.2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.rating .star-container > .star:hover {
+  background-color: var(--very-dark-blue);
+  cursor: pointer;
+}
+
+.rating .star-container > .starred {
+  background-color: var(--orange);
+}
+
+.rating > input {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: white;
+  background-color: var(--orange);
+  padding: 0.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .rating .star-container > .star:hover {
+    background-color: var(--orange);
+  }
+}
+
+.thank {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank > span {
+  color: var(--orange);
+  display: block;
+  border-radius: 20px;
+  background-color: var(--very-dark-blue);
+  padding: 0.5rem;
+  font-size: 14px;
+  margin: 1rem 0rem;
+}
+
+.thank > h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.thank > p {
+  width: 100%;
+  color: var(--medium-grey);
+  font-size: 14px;
+  margin-top: 0.6rem;
+  text-align: center;
+}
